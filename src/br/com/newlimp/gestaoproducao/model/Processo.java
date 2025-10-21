@@ -26,4 +26,8 @@ public class Processo {
 
     public void executar() {
     }
+
+    public void setStatus(StatusProcesso status) {
+        this.status = status;
+    }
 }
