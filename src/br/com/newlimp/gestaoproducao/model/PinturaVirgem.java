@@ -14,10 +14,56 @@ public class PinturaVirgem extends Processo{
     private List<Chapa> chapasUsadas;
     private Map<String, Integer> insumosUsados;
 
+    public Cores getCor() {
+        return cor;
+    }
+
+    public void setCor(Cores cor) {
+        this.cor = cor;
+    }
+
+    public int getChapasPlanejadas() {
+        return chapasPlanejadas;
+    }
+
+    public void setChapasPlanejadas(int chapasPlanejadas) {
+        this.chapasPlanejadas = chapasPlanejadas;
+    }
+
+    public int getChapasPintadas() {
+        return chapasPintadas;
+    }
+
+    public void setChapasPintadas(int chapasPintadas) {
+        this.chapasPintadas = chapasPintadas;
+    }
+
+    public Tinta getTintaUtilizada() {
+        return tintaUtilizada;
+    }
+
+    public void setTintaUtilizada(Tinta tintaUtilizada) {
+        this.tintaUtilizada = tintaUtilizada;
+    }
+
+    public List<Chapa> getChapasUsadas() {
+        return chapasUsadas;
+    }
+
+    public void setChapasUsadas(List<Chapa> chapasUsadas) {
+        this.chapasUsadas = chapasUsadas;
+    }
+
+    public Map<String, Integer> getInsumosUsados() {
+        return insumosUsados;
+    }
+
+    public void setInsumosUsados(Map<String, Integer> insumosUsados) {
+        this.insumosUsados = insumosUsados;
+    }
+
     @Override
     public void executar() {
-        //irá iniciar o processo com uma quantidade padrão de todos os insumos
-        //no final do processo a pessoa diz o que usou
         if (!verificarEstoque()) { //aqui é sempre testando se é false. Se for, entra no if.
             System.out.println("Estoque insuficiente para iniciar o processo de pintura virgem.");
             return;
